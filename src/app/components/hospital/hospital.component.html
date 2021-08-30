@@ -1,0 +1,20 @@
+<p>hospital works!</p>
+<agm-map [latitude]='lat' [longitude]='long' [zoom]='zoom'>
+
+
+
+    <agm-marker *ngFor="let marker of markers" [latitude]="marker.lat" [longitude]="marker.lng">
+
+        <agm-info-window #infoWindow>
+
+            {{ marker.label }}
+
+        </agm-info-window>
+
+    </agm-marker>
+
+
+
+</agm-map>
+
+<!-- Use custom zoom buttons -->
